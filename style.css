@@ -253,7 +253,7 @@ button .fas {
   display: none;
 }
 
-.success-message {
+#greeting.success-message {
   background-color: #e8f4fc;
   color: #003c71;
 }
@@ -311,10 +311,32 @@ select {
   border-top: 2px solid #f1f5f9;
 }
 
-.team-stats h3 {
+.attendee-list {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f1f5f9;
+}
+
+.team-stats h3,
+.attendee-list h3 {
   color: #64748b;
   font-size: 16px;
   margin-bottom: 20px;
+}
+
+.attendee-list ul {
+  list-style: none;
+}
+
+.attendee-list li {
+  padding: 12px 15px;
+  background-color: #f8fafc;
+  border-radius: 8px;
+  color: #475569;
+}
+
+.attendee-list li + li {
+  margin-top: 8px;
 }
 
 .teams-grid {
@@ -325,6 +347,7 @@ select {
 
 .team-card {
   padding: 15px;
+  border: 3px solid transparent;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -340,6 +363,29 @@ select {
 }
 .team-card.power {
   background-color: #fff7ed;
+}
+
+.team-card.water.winner {
+  border-color: #0077a3;
+}
+
+.team-card.zero.winner {
+  border-color: #15803d;
+}
+
+.team-card.power.winner {
+  border-color: #c2410c;
+}
+
+.goal-message {
+  display: none;
+  margin: 16px 0;
+  padding: 16px 20px;
+  border-radius: 8px;
+  background-color: #e8f4fc;
+  color: #003c71;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .team-name {

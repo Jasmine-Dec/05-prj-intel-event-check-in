@@ -36,7 +36,8 @@
     </div>
     <div class="container">
       <!-- Feedback message -->
-      <p id="greeting"></p>
+      <p id="greeting" class="success-message"></p>
+      <p id="goalMessage" class="goal-message" aria-live="polite"></p>
 
       <!-- Check-in form -->
       <form class="check-in" id="checkInForm">
@@ -67,20 +68,26 @@
       <div class="team-stats">
         <h3>Team Attendance</h3>
         <div class="teams-grid">
-          <div class="team-card water">
+          <div class="team-card water" data-team="water">
             <span class="team-name">🌊 Team Water Wise</span>
             <span class="team-count" id="waterCount">0</span>
           </div>
-          <div class="team-card zero">
+          <div class="team-card zero" data-team="zero">
             <span class="team-name">🌿 Team Net Zero</span>
             <span class="team-count" id="zeroCount">0</span>
           </div>
-          <div class="team-card power">
+          <div class="team-card power" data-team="power">
             <span class="team-name">⚡ Team Renewables</span>
             <span class="team-count" id="powerCount">0</span>
           </div>
         </div>
       </div>
+
+      <!-- Attendee list -->
+      <section class="attendee-list" aria-labelledby="attendeeListHeading">
+        <h3 id="attendeeListHeading">Checked-in Attendees</h3>
+        <ul id="attendeeList" aria-live="polite"></ul>
+      </section>
     </div>
 
     <footer class="footer">
